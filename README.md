@@ -86,6 +86,24 @@ cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSY
 
 ## 🔐 Security Architecture
 
+### Encryption Details
+'''
+┌─────────────────────────────────────────────────┐
+│                Security Architecture            │
+├─────────────────────────────────────────────────┤
+│  User Input → Master Password                   │
+│         ↓                                       │
+│  Key Derivation (PBKDF2 + SHA-256)             │
+│         ↓                                       │
+│  Generate Random Salt (16 bytes)               │
+│         ↓                                       │
+│  Derive AES-256 Key (32 bytes)                 │
+│         ↓                                       │
+│  Encrypt Data (AES-256 CBC Mode)               │
+│         ↓                                       │
+│  Save to passwords.dat                          │
+└─────────────────────────────────────────────────┘
+'''
 
 ### Data Protection
 - **Master Password**: Never stored on disk
@@ -94,7 +112,7 @@ cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSY
 - **Key Derivation**: 100,000 iterations (configurable)
 
 ## 📁 File Structure
-\'\'\'
+'''
 PasswordManager/
 ├── PasswordManager.c          # Main source code
 ├── PasswordManager.exe        # Compiled executable

@@ -118,11 +118,7 @@ PasswordManager/
 ├── PasswordManager.exe        # Compiled executable
 ├── passwords.dat              # Encrypted database (created on first run)
 ├── README.md                  # This documentation
-├── LICENSE                    # License file
-└── screenshots/               # Application screenshots
-    ├── main-window.png
-    ├── add-entry.png
-    └── search-feature.png
+└── LICENSE                    # License file
 ```
 
 ## ⚙️ Configuration

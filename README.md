@@ -43,17 +43,17 @@ A secure Windows desktop password manager application with AES-256 encryption fo
 ### Option 2: Build from Source
 
 #### Using MinGW (Recommended):
-'''bash
+```bash
 # Install MinGW if not already installed
 # Then compile:
 gcc -o PasswordManager.exe PasswordManager.c -lcomctl32 -ladvapi32 -lgdi32 -mwindows -O2
-'''
+```
 
 #### Using Visual Studio:
 Open Developer Command Prompt and run:
-'''cmd
+```cmd
 cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSYSTEM:WINDOWS /OUT:PasswordManager.exe
-'''
+```
 
 ## 📖 Usage Guide
 
@@ -87,7 +87,7 @@ cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSY
 ## 🔐 Security Architecture
 
 ### Encryption Details
-'''
+```
 ┌─────────────────────────────────────────────────┐
 │                Security Architecture            │
 ├─────────────────────────────────────────────────┤
@@ -103,7 +103,7 @@ cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSY
 │         ↓                                       │
 │  Save to passwords.dat                          │
 └─────────────────────────────────────────────────┘
-'''
+```
 
 ### Data Protection
 - **Master Password**: Never stored on disk
@@ -112,7 +112,7 @@ cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSY
 - **Key Derivation**: 100,000 iterations (configurable)
 
 ## 📁 File Structure
-'''
+```
 PasswordManager/
 ├── PasswordManager.c          # Main source code
 ├── PasswordManager.exe        # Compiled executable
@@ -123,18 +123,18 @@ PasswordManager/
     ├── main-window.png
     ├── add-entry.png
     └── search-feature.png
-'''
+```
 
 ## ⚙️ Configuration
 
 ### Building Options
 Modify these constants in the source code for customization:
-'''c
+```c
 #define MAX_ENTRIES 100        // Maximum number of password entries
 #define MAX_STRING 256         // Maximum length of strings
 #define AES_KEY_SIZE 32        // AES-256 key size (32 bytes = 256 bits)
 #define SALT_SIZE 16           // Salt size for key derivation
-'''
+```
 
 ### Compilation Flags
 - `-O2` : Optimize for speed
@@ -171,13 +171,13 @@ Modify these constants in the source code for customization:
 ## 🔧 Development
 
 ### Building for Development
-'''bash
+```bash
 # Debug build with symbols
 gcc -o PasswordManager.exe PasswordManager.c -lcomctl32 -ladvapi32 -lgdi32 -mwindows -g
 
 # Release build
 gcc -o PasswordManager.exe PasswordManager.c -lcomctl32 -ladvapi32 -lgdi32 -mwindows -O2 -s
-'''
+```
 
 ### Code Structure
 - `WinMain()`: Application entry point

@@ -36,7 +36,7 @@ A secure Windows desktop password manager application with AES-256 encryption fo
 ## 🚀 Installation
 
 ### Option 1: Download Pre-compiled Binary
-1. Download the latest release from the [Releases](https://github.com/yourusername/passwordmanager/releases) page
+1. Download the latest release from the [Releases](https://github.com/akif4ek/passwordmanager/releases) page
 2. Extract the ZIP file
 3. Run `PasswordManager.exe`
 
@@ -234,16 +234,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 - Windows Cryptography API team
 - OpenSSL project for encryption inspiration
-- All contributors and testers
-- Security researchers for their valuable feedback
-
-## 📧 Support
-- **GitHub Issues:** Report bugs or request features
-- **Email:** support@example.com
-- **Documentation:** Full documentation
-
-## 📱 Screenshots
-(Add your screenshots here)
 
 ## ⚠️ Important Security Notice
 Always keep your master password secure and never share it. Regularly backup your `passwords.dat` file. This tool is for personal use - evaluate its security for your specific needs.
@@ -255,19 +245,6 @@ Star this repo if you find it useful! ⭐
 2. Run `PasswordManager.exe`
 3. Set a strong master password
 4. Start adding your passwords securely!
-
-## Need Help?
-If you encounter any issues or have questions:
-- Check the Troubleshooting section
-- Look for existing issues on GitHub
-- Create a new issue if your problem isn't already addressed
-
-## For Developers
-If you want to contribute or understand the codebase:
-- The main logic is in `PasswordManager.c`
-- Encryption functions use Windows Cryptography API
-- GUI is built with native Windows controls
-- File format is custom but well-documented in the code
 
 ## Changelog
 **Version 1.0**

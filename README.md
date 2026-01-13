@@ -93,13 +93,13 @@ cl PasswordManager.c /link comctl32.lib advapi32.lib user32.lib gdi32.lib /SUBSY
 ├─────────────────────────────────────────────────┤
 │  User Input → Master Password                   │
 │         ↓                                       │
-│  Key Derivation (PBKDF2 + SHA-256)             │
+│  Key Derivation (PBKDF2 + SHA-256)              │
 │         ↓                                       │
-│  Generate Random Salt (16 bytes)               │
+│  Generate Random Salt (16 bytes)                │
 │         ↓                                       │
-│  Derive AES-256 Key (32 bytes)                 │
+│  Derive AES-256 Key (32 bytes)                  │
 │         ↓                                       │
-│  Encrypt Data (AES-256 CBC Mode)               │
+│  Encrypt Data (AES-256 CBC Mode)                │
 │         ↓                                       │
 │  Save to passwords.dat                          │
 └─────────────────────────────────────────────────┘
